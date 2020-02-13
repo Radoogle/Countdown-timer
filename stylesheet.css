@@ -1,5 +1,6 @@
 body {
 background-color: aquamarine;
+    font-size: 25px;
 }
 h1 {
     text-align: center;
@@ -17,6 +18,8 @@ h1 {
     cursor: move;
     z-index: 10;
     overflow: auto;
+    top: 25%;
+    left: 50%;
 }
 .displayDate {
     text-align: center;
@@ -26,6 +29,18 @@ h1 {
     padding: 10px;
     border-radius: 30px;
 }
-#countdown {
-    display: none;
+.toDisplay {
+    display: block;
+}
+#nameEvent {
+    background-color: beige;
+    border: 3px solid #ddd;
+    padding: 10px;
+    border-radius: 30px;
+}
+@media only screen and (max-width: 900px) {
+    #clockContainer {
+        top: 500px;
+        left: 10%; 
+    }
 }

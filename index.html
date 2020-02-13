@@ -5,27 +5,28 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
-	<h1>Countdown Timer</h1>
+	<h1><strong>Countdown Timer</strong></h1>
+    <div>
+        <p id="currentTime">Current Time: </p>
+    </div> <br>
     <div id="dateInput"> 
-            <form>
+            <form id="form" > 
+                <input id="inputName" type="text" name="inputName" autofocus required placeholder="Enter the name for the event" size="50" onchange="hideEvent()"/> <br><br>
                 <label for="inputDate">Choose the event date:</label>
-                <input id="inputDate" type="date" name="Idate" autofocus onchange="displaySelectedDate()"/><br><br>
+                <input id="inputDate" type="date" name="inputDate" onchange="hideEvent()" required/>
+                <button type="submit">Start</button>
+                <br>
             </form>
-    </div>    
+    </div>  
     <div id="clockContainer">
-        <div><p id="coordonateInitiale"></p></div>
-        <div><p id="coordonateCurente"></p></div>
         <div class="displayDate">
-            <p>Current time:</p>
-            <p id="currentDate"></p>
-        </div>
-        <div class="displayDate">
+            <p id="nameEvent"><b>Event name</b></p>
             <p>Event date:</p>
-            <p id="selectedDate"></p>
+            <p id="selectedDate" class="toDisplay"></p>
         </div>
         <div class="displayDate">
             <p>Countdown to event:</p>
-            <p id="countdown"></p>
+            <p id="countdown" class="toDisplay"></p>
         </div> <br> 
 
     </div>
