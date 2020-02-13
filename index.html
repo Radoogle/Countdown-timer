@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Countdown Timer</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<body>
+	<h1><strong>Countdown Timer</strong></h1>
+    <div>
+        <p id="currentTime">Current Time: </p>
+    </div> <br>
+    <div id="dateInput"> 
+            <form id="form" > 
+                <input id="inputName" type="text" name="inputName" autofocus required placeholder="Enter the name for the event" size="50" onchange="hideEvent()"/> <br><br>
+                <label for="inputDate">Choose the event date:</label>
+                <input id="inputDate" type="date" name="inputDate" onchange="hideEvent()" required/>
+                <button type="submit">Start</button>
+                <br>
+            </form>
+    </div>  
+    <div id="clockContainer">
+        <div class="displayDate">
+            <p id="nameEvent"><b>Event name</b></p>
+            <p>Event date:</p>
+            <p id="selectedDate" class="toDisplay"></p>
+        </div>
+        <div class="displayDate">
+            <p>Countdown to event:</p>
+            <p id="countdown" class="toDisplay"></p>
+        </div> <br> 
+
+    </div>
+<script src="javascript.js"></script>
+</body>
+</html>
