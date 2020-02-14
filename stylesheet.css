@@ -6,7 +6,7 @@ h1 {
     text-align: center;
     padding: 5% 25% 5% 25%;
 }
-#clockContainer {
+#clockContainer, #graphicContainer {
     position: absolute;
     margin: 0 auto;
     background-color: antiquewhite;
@@ -39,8 +39,24 @@ h1 {
     border-radius: 30px;
 }
 @media only screen and (max-width: 900px) {
-    #clockContainer {
-        top: 500px;
-        left: 10%; 
+    #clockContainer, #graphicContainer {
+        top: 550px;
+        left: 25%; 
     }
+}
+#inputName {
+    border-radius: 15px;
+    height: 25px;
+    padding: 8px;
+    font-size: 20px;
+}
+#button {
+    border-radius: 15px;
+    height: 40px;
+    width: 80px;
+    padding: 0px;
+    font-size: 20px;
+}
+.progressP {
+    display: inline;
 }

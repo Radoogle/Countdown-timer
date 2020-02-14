@@ -11,14 +11,23 @@
     </div> <br>
     <div id="dateInput"> 
             <form id="form" > 
-                <input id="inputName" type="text" name="inputName" autofocus required placeholder="Enter the name for the event" size="50" onchange="hideEvent()"/> <br><br>
+                <input id="inputName" class="Rounded input" type="text" name="inputName" autofocus required placeholder="Enter the name for the event" size="30" onchange="hideEvent()"/> <br><br>
                 <label for="inputDate">Choose the event date:</label>
                 <input id="inputDate" type="date" name="inputDate" onchange="hideEvent()" required/>
-                <button type="submit">Start</button>
-                <br>
+                <button type="submit" id="button">Start</button>
+                <br><br>
             </form>
-    </div>  
-    <div id="clockContainer">
+    </div>
+    <div>
+        <form id="radioForm">
+            <p>Choose the display type of the clock: </p>
+            <input type="radio" id="simple" name="clockType" value="simple" checked />
+            <label for="simple">Simple clock</label><br>
+            <input type="radio" id="graphic" name="clockType" value="graphic" />
+            <label for="graphic">Graphic bars</label>
+        </form>
+    </div>
+    <div id="clockContainer"> <!-- simple display -->
         <div class="displayDate">
             <p id="nameEvent"><b>Event name</b></p>
             <p>Event date:</p>
@@ -28,7 +37,20 @@
             <p>Countdown to event:</p>
             <p id="countdown" class="toDisplay"></p>
         </div> <br> 
-
+    </div>
+    <div id="graphicContainer" style="display:none"> <!-- graphic display -->
+        <div class="displayDate">
+            <p id="gNameEvent"><b>Event name</b></p>
+            <p id="gSelectedDate" class="toDisplay"></p>
+        </div>
+        <div class="displayDate">
+            <p>Countdown to event:</p>
+            <progress class="bars" id="daysBar" max="366"></progress><br><p class="progressP" id="progressDays">days</p><br>
+            <progress class="bars" id="hoursBar" max="24"></progress><br><p class="progressP" id="progressHours">hours</p><br>
+            <progress class="bars" id="minutesBar" max="60"></progress><br><p class="progressP" id="progressMinutes">minutes</p><br>
+            <progress class="bars" id="secondsBar" max="60"></progress><br><p class="progressP" id="progressSeconds">seconds</p>
+            <br>
+        </div> <br> 
     </div>
 <script src="javascript.js"></script>
 </body>
